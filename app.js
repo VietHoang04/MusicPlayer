@@ -32,61 +32,61 @@ const app = {
         {
             name: "View",
             singer: "Ethan Dufault",
-            path: "https://bom.so/Md6RAv",
+            path: "./songs/View - Ethan Dufault.mp3",
             image: "https://images.genius.com/ce30f5a1cb72fa5e87543328f38338ea.1000x1000x1.jpg"
         },
         {
             name: "Attention",
             singer: "Charlie Puth",
-            path: "https://bom.so/N10tBp",
+            path: "./songs/Attention - Charlie Puth.mp3",
             image:"https://bom.so/oeOVvn"
         },
         {
             name: "Light Switch",
             singer: "Charlie Puth",
-            path: "https://bom.so/yksHuV",
+            path: "./songs/Light Switch - Charlie Puth.mp3",
             image: "https://upload.wikimedia.org/wikipedia/vi/1/1b/Charlie_Puth_Light_Switch.png"
         },
         {
             name: "Abcdefu",
             singer: "GAYLE",
-            path: "https://bom.so/b9m4Xq",
+            path: "./songs/Abcdefu - GAYLE.mp3",
             image:"https://m.media-amazon.com/images/I/71BxdpAy0KL._SS500_.jpg"
         },
         {
             name: "Bruno Mars",
             singer: "24K Magic",
-            path: "https://bom.so/TOXgMJ",
+            path: "./songs/24K Magic - Bruno Mars.mp3",
             image:"https://upload.wikimedia.org/wikipedia/vi/4/47/Bruno_Mars_%26_R3hab_-_24K_Magic_remix.jpg"
         },
         {
             name: "Someone Like You",
             singer: "Adele",
-            path:"https://bom.so/BjUNDZ",
+            path:"./songs/Someone Like You - Adele.mp3",
             image:"https://data.chiasenhac.com/data/cover/50/50000.jpg"
         },
         {
             name: "Take Me To Church",
             singer: "Hozier",
-            path: "https://bom.so/E34DFX",
+            path: "./songs/Take Me To Church - Hozier .mp3",
             image:"https://i.ytimg.com/vi/PVjiKRfKpPI/maxresdefault.jpg"
         },
         {
             name: "Let Me Down Slowly",
             singer: "Alec Benjamin",
-            path: "https://bom.so/dZfslM",
+            path: "./songs/Let Me Down Slowly - Alec Benjamin.mp3",
             image:"https://i1.sndcdn.com/artworks-000531132954-sukp31-t500x500.jpg"
         },
         {
             name: "ZAYN",
             singer: "Dusk Till Dawn",
-            path: "https://bom.so/0crO6l",
+            path: "./songs/Dusk Till Dawn - Zayn Ft Sia .mp3",
             image:"https://i.ytimg.com/vi/tt2k8PGm-TI/maxresdefault.jpg"
         },
         {
             name: "Old Town Road",
             singer: "Lil Nas X",
-            path: "https://bom.so/llXSb1",
+            path: "./songs/Old Town Road Remix - Lil Nas X.mp3",
             image:"https://bom.so/5LjPM1"
         }
             
