@@ -94,26 +94,24 @@ const app = {
     setConfig: function (key, value) {
         this.config[key] = value;
         // (2/2) Uncomment the line below to use localStorage
-        // localStorage.setItem(PlAYER_STORAGE_KEY, JSON.stringify(this.config));
+        localStorage.setItem(PlAYER_STORAGE_KEY, JSON.stringify(this.config));
     },
     render: function () {
         const htmls = this.songs.map((song, index) => {
             return `
-                    <div class="song ${
-                    index === this.currentIndex ? "active" : ""
-                    }" data-index="${index}">
-                        <div class="thumb"
-                            style="background-image: url('${song.image}')">
-                        </div>
-                        <div class="body">
-                            <h3 class="title">${song.name}</h3>
-                            <p class="author">${song.singer}</p>
-                        </div>
-                        <div class="option">
-                            <i class="fas fa-ellipsis-h"></i>
-                        </div>
+                <div class="song ${index === this.currentIndex ? "active" : "" }" data-index="${index}">
+                    <div class="thumb"
+                        style="background-image: url('${song.image}')">
                     </div>
-                `;
+                    <div class="body">
+                        <h3 class="title">${song.name}</h3>
+                        <p class="author">${song.singer}</p>
+                    </div>
+                    <div class="option">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                </div>
+            `;
         });
         playlist.innerHTML = htmls.join("");
     },
@@ -176,9 +174,7 @@ const app = {
         // When the song progress changes
         audio.ontimeupdate = function () {
             if (audio.duration) {
-                const progressPercent = Math.floor(
-                    (audio.currentTime / audio.duration) * 100
-                );
+                const progressPercent = Math.floor((audio.currentTime / audio.duration) * 100);
                 progress.value = progressPercent;
             }
         };
@@ -245,13 +241,13 @@ const app = {
         // Lắng nghe hành vi click vào playlist
         // Listen to playlist clicks
         playlist.onclick = function (e) {
-            const songNode = e.target.closest(".song:not(.active)");
+            const songNotActive = e.target.closest(".song:not(.active)");
 
-            if (songNode || e.target.closest(".option")) {
+            if (songNotActive || e.target.closest(".option")) {
                 // Xử lý khi click vào song
                 // Handle when clicking on the song
-                if (songNode) {
-                    _this.currentIndex = Number(songNode.dataset.index);
+                if (songNotActive) {
+                    _this.currentIndex = Number(songNotActive.dataset.index);
                     _this.loadCurrentSong();
                     _this.render();
                     audio.play();
@@ -263,6 +259,8 @@ const app = {
             }
         };
     },
+
+    
     scrollToActiveSong: function () {
         setTimeout(() => {
             $(".song.active").scrollIntoView({
